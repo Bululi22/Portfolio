@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+/* .bg-amarillo {
+  background-image: radial-gradient(circle at center, #eacb46, #ffb74c);
+} */
