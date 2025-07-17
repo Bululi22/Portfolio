@@ -1,6 +1,10 @@
 <header
-  class="h-screen w-full bg-[#81e1ff] flex flex-col items-center justify-center text-center"
+  class="relative h-screen w-full bg-[#81e1ff] flex flex-col items-center justify-center text-center -z-0"
 >
+  <!-- Nubes -->
+  <app-header-nubes />
+
+  <!-- Texto -->
   <img src="images/afg.svg" alt="logo-header" class="w-60" />
   <h1 class="text-6xl font-bold">Adrián Ferradás Gutiérrez</h1>
   <div
@@ -9,5 +13,13 @@
     <h3 class="text-2xl font-bold">Desarrollador Web</h3>
   </div>
 </header>
-
-<img src="images/nube.png" alt="nube-fondo1" class="w-60" />
+<!-- Degradado Azul-Amarrillo -->
+<div class="bg-[#81e1ff]">
+  <div class="bg-linear-to-t from-[#f1c448] to-transparent w-full relative">
+    <img
+      src="images/barraseparadora.svg"
+      alt="separador"
+      class="w-[100%] h-10 object-cover"
+    />
+  </div>
+</div>
