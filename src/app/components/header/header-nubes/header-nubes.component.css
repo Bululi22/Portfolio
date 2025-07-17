@@ -1,0 +1,32 @@
+@keyframes nube {
+  0% {
+    left: -50%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    left: 105%;
+    opacity: 0;
+  }
+}
+
+.animate-nube {
+  animation: nube 15s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-nube {
+    animation-duration: 10s;
+  }
+}
+
+@media (max-width: 425px) {
+  .animate-nube {
+    animation-duration: 5s;
+  }
+}

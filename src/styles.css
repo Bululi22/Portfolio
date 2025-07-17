@@ -7,7 +7,10 @@
   --color-amarillo: #ecc846;
 }
 
-/* HAY QUE SEPARAR ESTO */
+body {
+  font-family: "Lato", sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -16,43 +19,3 @@ h5,
 h6 {
   font-family: "Space Grotesk", sans-serif;
 }
-
-@keyframes nube {
-  0% {
-    left: -50%;
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  88% {
-    opacity: 1;
-  }
-  100% {
-    left: 105%;
-    opacity: 0;
-  }
-}
-
-.animate-nube {
-  animation: nube 15s linear infinite;
-}
-
-@media (max-width: 768px) {
-  .animate-nube {
-    animation-duration: 10s;
-  }
-}
-
-@media (max-width: 425px) {
-  .animate-nube {
-    animation-duration: 5s;
-  }
-}
-
-/* Experiencia */
-.sombra-exp {
-  box-shadow: -10px 10px;
-}
-
-/* PRUEBAS */

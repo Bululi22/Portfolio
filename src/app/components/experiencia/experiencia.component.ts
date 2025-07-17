@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-experiencia',
   imports: [],
   templateUrl: './experiencia.component.html',
+  styleUrls: ['experiencia.component.css'],
 })
-export class ExperienciaComponent { }
+export class ExperienciaComponent {}

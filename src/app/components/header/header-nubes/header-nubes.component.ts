@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-header-nubes',
   imports: [],
   templateUrl: './header-nubes.component.html',
+  styleUrls: ['header-nubes.component.css'],
 })
-export class HeaderNubesComponent { }
+export class HeaderNubesComponent {}
