@@ -1,34 +1,37 @@
-<section class="bg-claro w-full h-400">
-  <h1 class="text-9xl">Proyectos</h1>
-  <div class="flex m-10 gap-10">
-    <!-- FJ -->
-    <div class="w-100 h-60 caja rounded-4xl bg-blue-400">
-      <div class="h-40">
-        <img src="images/proyectos/fj-logo.svg" alt="FJ-logo" class="p-5" />
-      </div>
-      <h3 class="text-2xl font-bold text-center">FJ</h3>
-    </div>
-    <!-- Informula -->
-    <div class="w-100 h-60 caja rounded-4xl bg-blue-400">
-      <div class="h-40">
-        <img
-          src="images/proyectos/informula-logo.svg"
-          alt="informula-logo"
-          class="p-5"
-        />
-        <h3 class="text-2xl font-bold text-center">Informula</h3>
-      </div>
-    </div>
-    <!-- Gesclub -->
-    <div class="w-100 h-60 caja rounded-4xl bg-blue-400">
-      <div class="h-40">
-        <img
-          src="images/proyectos/gesclub-logo.svg"
-          alt="gesclub-logo"
-          class="p-5"
-        />
-        <h3 class="text-2xl font-bold text-center">Gesclub</h3>
-      </div>
+<!-- Fila principal -->
+<div class="flex justify-center gap-6 mt-10 transition-all duration-300">
+  @for (tarjeta of tarjetas; track tarjeta.id) { @if (tarjetaSeleccionada ===
+  null || tarjetaSeleccionada === tarjeta.id) {
+  <div
+    class="w-48 h-64 bg-white rounded-xl shadow-lg cursor-pointer transition-all duration-500 transform"
+    [class.scale-110]="tarjetaSeleccionada === tarjeta.id"
+    [class.animate-slideUp]="
+      tarjetaSeleccionada === tarjeta.id && animacionEntrada
+    "
+    (click)="seleccionarTarjeta(tarjeta.id)"
+  >
+    <div class="flex items-center justify-center h-full font-bold text-xl">
+      {{ tarjeta.titulo }}
     </div>
   </div>
-</section>
+  } }
+</div>
+
+<!-- Resto de tarjetas abajo -->
+@if (tarjetaSeleccionada !== null) {
+<div
+  class="flex justify-center gap-6 transition-all duration-500 ease-in-out mt-4"
+>
+  @for (tarjeta of tarjetas; track tarjeta.id) { @if (tarjeta.id !==
+  tarjetaSeleccionada) {
+  <div
+    class="w-32 h-48 bg-gray-200 rounded-xl shadow opacity-0 translate-y-[-20px] animate-slideIn cursor-pointer"
+    (click)="seleccionarTarjeta(tarjeta.id)"
+  >
+    <div class="flex items-center justify-center h-full text-sm font-semibold">
+      {{ tarjeta.titulo }}
+    </div>
+  </div>
+  } }
+</div>
+}
