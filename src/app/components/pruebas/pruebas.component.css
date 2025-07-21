@@ -1,5 +1,5 @@
 .sombra-exp {
-  box-shadow: -4px 4px;
+  box-shadow: -4px 4px #1d1d1b;
 }
 
 *,
@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
+  background: #ececec;
 }
 
 .timeline {
@@ -28,13 +28,13 @@ body {
   position: absolute;
   width: 30px;
   height: 90%;
-  background: #ffffff;
+  background: #ececec;
   top: 5%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border: solid 3px black;
-  box-shadow: -4px 4px;
+  border: solid 3px #1d1d1b;
+  box-shadow: -4px 4px #1d1d1b;
 }
 
 .container {
@@ -59,21 +59,50 @@ body {
   width: 75px;
   height: 30px;
   top: calc(50% - 8px);
-  background: #ffffff;
+  background: #ececec;
   z-index: 1;
-  border: 3px black;
+  border: 3px #1d1d1b;
   border-style: solid none solid none;
 }
 
 .container.left::after {
   right: 12px;
-  box-shadow: -4px 4px;
+  box-shadow: -4px 4px #1d1d1b;
 }
 .container.right::after {
   left: 12px;
-  box-shadow: 0px 4px;
+  box-shadow: 0px 4px #1d1d1b;
 }
 
 .container .content {
   position: relative;
+}
+
+/* md */
+@media (max-width: 767px) {
+  /* Linea Y */
+  .timeline::after {
+    left: 8%;
+    transform: translateX(-8%);
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    padding-left: 25%;
+    padding-right: 0px;
+    left: 5%;
+    transform: translateX(-5%);
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  /* Linea X */
+  .container.left::after,
+  .container.right::after {
+    left: 16%;
+    z-index: 0;
+  }
 }
