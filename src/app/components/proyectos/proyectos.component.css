@@ -1,38 +1,41 @@
-h1 {
-  color: rgba(0, 0, 0, 0.6);
-  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
-}
-
-.caja {
-  box-shadow: 32px 32px 64px #c7c7c7, -32px -32px 64px #f9f9f9;
-}
-
-@keyframes slideIn {
+@keyframes aparecer {
   0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
-    transform: translateY(-20px);
+    top: 0;
+  }
+  51% {
+    opacity: 0;
+    top: 100;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-.animate-slideIn {
-  animation: slideIn 0.5s ease-out forwards;
+.card {
+  position: absolute;
+
+  transform: translateY(-50%);
+  opacity: 1;
+  animation: aparecer 0.8s ease-out forwards;
 }
 
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Posiciones individuales */
+.card-fj {
+  left: 0%;
+  top: 200px;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.animate-slideUp {
-  animation: slideUp 0.5s ease-out forwards;
+.card-informula {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.card-gesclub {
+  left: 100%;
+  transform: translateX(-50%) translateY(-50%);
 }

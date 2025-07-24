@@ -1,99 +1,279 @@
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<div class="bg-green-400 w-full min-h-100 h-auto -z-0">
-  <div class="timeline">
-    <div class="container left">
-      <div
-        class="w-[100%] h-auto h-min-10 bg-claro border-3 border-oscuro sombra-exp content z-10"
-      >
-        <div class="w-full h-auto py-1 bg-amarillo flex">
-          <div
-            class="w-14 h-14 rounded-full overflow-hidden bg-claro m-2 mx-5 border-1"
-          >
-            <img
-              src="images/jostari.svg"
-              alt="jostari-logo"
-              class="w-full h-full p-1"
-            />
-          </div>
-          <div class="flex flex-col justify-evenly py-3">
-            <h6 class="font-bold text-xl">Jostari</h6>
-            <p class="">2023-2024</p>
-          </div>
-        </div>
-        <hr class="h-[3px] bg-oscuro border-oscuro" />
-        <p class="p-2">
-          Durante mi periodo en Jostari, gestioné la resolución de incidencias
-          técnicas, optimicé los procesos de pedidos y devoluciones a través de
-          la plataforma <b>WordPress</b> y elaboré materiales gráficos
-          utilizando <b>Illustrator</b>, contribuyendo a mejorar la comunicación
-          visual y la eficiencia operativa del sitio.
-        </p>
-      </div>
-    </div>
-    <!-- Orvium -->
-    <div class="container right">
-      <div
-        class="w-[100%] h-auto h-min-10 bg-claro border-3 border-oscuro sombra-exp content z-10"
-      >
-        <div class="w-full h-auto py-1 bg-amarillo flex">
-          <div
-            class="w-14 h-14 rounded-full overflow-hidden bg-claro m-2 mx-5 border-1"
-          >
-            <img
-              src="images/orvium.svg"
-              alt="orvium-logo"
-              class="w-full h-full p-1"
-            />
-          </div>
-          <div class="flex flex-col justify-evenly py-3">
-            <h6 class="font-bold text-xl">Orvium (Practicas)</h6>
-            <p class="">2024</p>
-          </div>
-        </div>
-        <hr class="h-[3px] bg-oscuro border-oscuro" />
-        <p class="p-2">
-          Durante mi FCT, contribuí al desarrollo de una aplicación web y móvil
-          utilizando <b>Angular</b> y <b>Tailwind</b>, además de utilizar
-          <b>MongoDB</b> como base de datos. <br /><br />
-          Colaboré con el equipo en el uso de diversas tecnologías y
-          herramientas a lo largo del proyecto.
-        </p>
-      </div>
-    </div>
-    <!-- Gven -->
-    <div class="container left">
-      <div
-        class="w-[100%] h-auto h-min-10 bg-claro border-3 border-oscuro sombra-exp content z-10"
-      >
-        <div class="w-full h-auto py-1 bg-amarillo flex">
-          <div
-            class="w-14 h-14 rounded-full overflow-hidden bg-claro m-2 mx-5 border-1"
-          >
-            <img
-              src="images/gven.svg"
-              alt="gven-logo"
-              class="w-full h-full p-1"
-            />
-          </div>
-          <div class="flex flex-col justify-evenly py-3">
-            <h6 class="font-bold text-xl">Gven</h6>
-            <p class="">2022-2023</p>
-          </div>
-        </div>
-        <hr class="h-[3px] bg-oscuro border-oscuro" />
-        <p class="p-2">
-          Durante mi etapa en Gven, desarrollé una tienda online completamente
-          funcional utilizando <b>WordPress</b>, integrando el sistema de pagos
-          <b>Stripe</b> para facilitar transacciones seguras y eficientes.
-          <br /><br />
-          Me encargué de la configuración técnica, la personalización del diseño
-          web y la optimización de la experiencia de usuario, asegurando un
-          entorno de compra intuitivo y fiable.
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="bg-green-400 w-full min-h-100 h-[1000px] -z-0 relative">
   <!-- ---- -->
+
+  <div class="relative w-[60vw] max-w-[1000px] m-auto">
+    <!-- FJ -->
+    <div
+      class="card card-fj"
+      [class.activo]="estadofj() === 'activar'"
+      [class.desplazar]="estadofj() === 'desplazar'"
+      [class.salir]="estadofj() === 'salir'"
+      (click)="activado('fj')"
+    >
+      <!-- Logo Titulo -->
+      <div class="logotitulo flex flex-col items-center gap-4 p-5">
+        <div class="">
+          <img
+            src="images/proyectos/fj-logo.svg"
+            alt="fj-logo"
+            class="object-cover w-30 m-auto"
+          />
+        </div>
+        <div class="">
+          <h3 class="text-center">FJ</h3>
+        </div>
+      </div>
+
+      <!-- Contenido -->
+      <div
+        class="card-content p-5 pt-0 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg"
+      >
+        <!-- Texto -->
+        <div class="flex-1">
+          <p>
+            Aplicación web interactiva desarrollada con
+            <strong>Angular 17</strong>
+            para mejorar la velocidad y precisión al escribir. Presenta una
+            interfaz minimalista, intuitiva y enfocada en la enseñanza eficaz de
+            la mecanografía.
+          </p>
+          <br />
+
+          <p>Incluye:</p>
+          <ul>
+            <li>
+              Línea de texto con retroalimentación en tiempo real para mejorar
+              la escritura.
+            </li>
+            <li>
+              Teclado virtual que resalta la tecla que debe pulsarse para guiar
+              al usuario.
+            </li>
+            <li>
+              Guía visual de manos que indica qué dedo utilizar para cada tecla,
+              facilitando el aprendizaje.
+            </li>
+          </ul>
+          <br />
+
+          <p>
+            Diseñada para aprender mecanografía de forma intuitiva y efectiva.
+          </p>
+          <br />
+
+          <p>Tecnologías utilizadas:</p>
+          <div class="flex gap-4">
+            <img
+              src="https://cdn.simpleicons.org/angular/000000"
+              title="Angular 17"
+              alt="Angular 17"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/css/000000"
+              title="CSS"
+              alt="CSS"
+              width="30"
+              height="30"
+            />
+          </div>
+        </div>
+
+        <!-- Imagen app -->
+        <div class="flex-1 flex flex-col items-center gap-4">
+          <img
+            src="images/proyectos/fj-captura.png"
+            alt="Captura app FJ"
+            class="w-full max-w-md rounded-2xl border-[8px] border-black"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Informula -->
+    <div
+      class="card card-informula"
+      [class.activo]="estadoinformula() === 'activar'"
+      [class.desplazar]="estadoinformula() === 'desplazar'"
+      [class.salir]="estadoinformula() === 'salir'"
+      (click)="activado('informula')"
+    >
+      <!-- Logo Titulo -->
+      <div class="logotitulo flex flex-col items-center gap-4 p-5">
+        <div class="">
+          <img
+            src="images/proyectos/informula-logo.svg"
+            alt="informula-logo"
+            class="object-cover w-30 m-auto"
+          />
+        </div>
+        <div class="">
+          <h3 class="text-center">Informula</h3>
+        </div>
+      </div>
+      <!-- Contenido -->
+      <div
+        class="card-content p-5 pt-0 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg"
+      >
+        <!-- Texto -->
+        <div class="flex-1">
+          <p>
+            Aplicación web desarrollada con <strong>Angular 19</strong> que
+            muestra información actualizada sobre la temporada de Fórmula 1.
+            Presenta una interfaz clara y funcional con los datos más
+            relevantes, obtenidos desde una API externa (no oficial).
+          </p>
+          <br />
+
+          <p>Incluye:</p>
+          <ul>
+            <li>Contador regresivo en tiempo real para la próxima carrera.</li>
+            <li>Clasificación actual de pilotos y equipos.</li>
+            <li>
+              Diseño moderno con <strong>Tailwind CSS</strong> y
+              <strong>DaisyUI</strong>.
+            </li>
+          </ul>
+          <br />
+          <p>Tecnologías utilizadas:</p>
+          <div class="flex gap-4">
+            <img
+              src="https://cdn.simpleicons.org/angular/000000"
+              title="Angular"
+              alt="Angular"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/tailwindcss/000000"
+              title="Tailwind CSS / DaisyUI"
+              alt="Tailwind CSS / DaisyUI"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/css/000000"
+              title="CSS"
+              alt="CSS"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/typescript/000000"
+              title="TypeScript"
+              alt="TypeScript"
+              width="30"
+              height="30"
+            />
+          </div>
+        </div>
+
+        <!-- Imagen app -->
+        <div class="flex-1 flex flex-col items-center gap-4">
+          <img
+            src="images/proyectos/fj-captura.png"
+            alt="Captura app Informula"
+            class="w-full max-w-md rounded-2xl border-[8px] border-black"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Gesclub -->
+    <div
+      class="card card-gesclub"
+      [class.activo]="estadogesclub() === 'activar'"
+      [class.desplazar]="estadogesclub() === 'desplazar'"
+      [class.salir]="estadogesclub() === 'salir'"
+      (click)="activado('gesclub')"
+    >
+      <div class="logotitulo flex flex-col items-center gap-4 p-5">
+        <div class="">
+          <img
+            src="images/proyectos/gesclub-logo.svg"
+            alt="gesclub-logo"
+            class="object-cover w-30 m-auto"
+          />
+        </div>
+        <div class="">
+          <h3 class="text-center">Gesclub</h3>
+        </div>
+      </div>
+      <!-- Contenido -->
+      <div
+        class="card-content p-5 pt-0 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg"
+      >
+        <!-- Texto -->
+        <div class="flex-1">
+          <p>
+            Aplicación web desarrollada con <strong>Angular 19</strong> que
+            facilita la gestión de socios en un club deportivo. Presenta una
+            interfaz intuitiva y eficiente que permite añadir, eliminar y
+            modificar.
+          </p>
+          <br />
+
+          <p>Incluye:</p>
+          <ul>
+            <li>Gestión completa de socios con perfiles personalizados.</li>
+            <li>
+              Calendario de eventos y actividades con notificaciones
+              automáticas.
+            </li>
+            <li>
+              Diseño moderno con <strong>Tailwind CSS</strong> y
+              <strong>DaisyUI</strong>.
+            </li>
+          </ul>
+          <br />
+          <p>Tecnologías utilizadas:</p>
+          <div class="flex gap-4">
+            <img
+              src="https://cdn.simpleicons.org/angular/000000"
+              title="Angular 19"
+              alt="Angular 19"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/mongodb/000000"
+              title="MongoDB"
+              alt="MongoDB"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/tailwindcss/000000"
+              title="Tailwind CSS / DaisyUI"
+              alt="Tailwind CSS / DaisyUI"
+              width="30"
+              height="30"
+            />
+            <img
+              src="https://cdn.simpleicons.org/typescript/000000"
+              title="TypeScript"
+              alt="TypeScript"
+              width="30"
+              height="30"
+            />
+          </div>
+        </div>
+
+        <!-- Imagen app -->
+        <div class="flex-1 flex flex-col items-center gap-4">
+          <img
+            src="images/proyectos/fj-captura.png"
+            alt="Captura app Gesclub"
+            class="w-full max-w-md rounded-2xl border-[8px] border-black"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- ---- -->
+  </div>
+  <div class="border-3 border-red-500 w-[30px] h-20 bg-blue-300 m-auto"></div>
+  <p class="text-center">|</p>
 </div>
-<div class="border-3 border-red-500 w-[30px] h-20 bg-blue-300 m-auto"></div>
-<p class="text-center">|</p>

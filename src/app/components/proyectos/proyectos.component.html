@@ -1,37 +1,5 @@
-<!-- Fila principal -->
-<div class="flex justify-center gap-6 mt-10 transition-all duration-300">
-  @for (tarjeta of tarjetas; track tarjeta.id) { @if (tarjetaSeleccionada ===
-  null || tarjetaSeleccionada === tarjeta.id) {
-  <div
-    class="w-48 h-64 bg-white rounded-xl shadow-lg cursor-pointer transition-all duration-500 transform"
-    [class.scale-110]="tarjetaSeleccionada === tarjeta.id"
-    [class.animate-slideUp]="
-      tarjetaSeleccionada === tarjeta.id && animacionEntrada
-    "
-    (click)="seleccionarTarjeta(tarjeta.id)"
-  >
-    <div class="flex items-center justify-center h-full font-bold text-xl">
-      {{ tarjeta.titulo }}
-    </div>
-  </div>
-  } }
+<div class="bg-pink-300 w-[90vw] h-screen m-auto relative">
+  <div class="card card-fj absolute w-10 h-10 bg-red-600">FJ</div>
+  <div class="card card-informula absolute w-10 h-10 bg-red-600">Informula</div>
+  <div class="card card-gesclub absolute w-10 h-10 bg-red-600">Gesclub</div>
 </div>
-
-<!-- Resto de tarjetas abajo -->
-@if (tarjetaSeleccionada !== null) {
-<div
-  class="flex justify-center gap-6 transition-all duration-500 ease-in-out mt-4"
->
-  @for (tarjeta of tarjetas; track tarjeta.id) { @if (tarjeta.id !==
-  tarjetaSeleccionada) {
-  <div
-    class="w-32 h-48 bg-gray-200 rounded-xl shadow opacity-0 translate-y-[-20px] animate-slideIn cursor-pointer"
-    (click)="seleccionarTarjeta(tarjeta.id)"
-  >
-    <div class="flex items-center justify-center h-full text-sm font-semibold">
-      {{ tarjeta.titulo }}
-    </div>
-  </div>
-  } }
-</div>
-}
