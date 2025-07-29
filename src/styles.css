@@ -19,3 +19,9 @@ h5,
 h6 {
   font-family: "Space Grotesk", sans-serif;
 }
+
+img {
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}

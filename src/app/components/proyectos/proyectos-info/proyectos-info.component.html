@@ -1,0 +1,230 @@
+@if (seleccionado) {
+<div
+  class="w-[95vw] max-w-[2000px] p-5 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg m-auto rounded-3xl bg-purple-400 relative"
+>
+  <!-- Botón cerrar -->
+  <button
+    class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-black transition"
+    (click)="cerrar()"
+  >
+    &times;
+  </button>
+
+  <!-- FJ -->
+  @if (seleccionado == 'fj') {
+  <!-- Texto -->
+  <div class="flex-1 h-full">
+    <h3 class="text-center text-4xl">FJ</h3>
+    <br />
+
+    <p>
+      Aplicación web interactiva desarrollada con
+      <strong>Angular 17</strong>
+      para mejorar la velocidad y precisión al escribir. Presenta una interfaz
+      minimalista, intuitiva y enfocada en la enseñanza eficaz de la
+      mecanografía.
+    </p>
+    <br />
+
+    <p>Incluye:</p>
+    <ul>
+      <li>
+        Línea de texto con retroalimentación en tiempo real para mejorar la
+        escritura.
+      </li>
+      <li>
+        Teclado virtual que resalta la tecla que debe pulsarse para guiar al
+        usuario.
+      </li>
+      <li>
+        Guía visual de manos que indica qué dedo utilizar para cada tecla,
+        facilitando el aprendizaje.
+      </li>
+    </ul>
+    <br />
+
+    <p>Diseñada para aprender mecanografía de forma intuitiva y efectiva.</p>
+    <br />
+
+    <p>Tecnologías utilizadas:</p>
+    <div class="flex gap-4">
+      <img
+        src="https://cdn.simpleicons.org/angular/000000"
+        title="Angular 17"
+        alt="Angular 17"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/css/000000"
+        title="CSS"
+        alt="CSS"
+        width="30"
+        height="30"
+      />
+    </div>
+  </div>
+
+  <!-- Imagen app -->
+  <div class="flex-1 flex flex-col items-center gap-4">
+    <img
+      src="images/proyectos/fj-logo.svg"
+      alt="fj-logo"
+      class="w-auto m-auto max-h-[75px] h-auto object-contain"
+    />
+    <img
+      src="images/proyectos/fj-captura.png"
+      alt="Captura app fj"
+      class="w-full max-w-md rounded-2xl border-[8px] border-black"
+    />
+  </div>
+
+  }
+  <!-- Informula -->
+  @if (seleccionado == 'informula') {
+  <!-- Texto -->
+  <div class="flex-1 h-full">
+    <h3 class="text-center text-4xl">Informula</h3>
+    <br />
+
+    <p>
+      Aplicación web desarrollada con <strong>Angular 19</strong> que muestra
+      información actualizada sobre la temporada de Fórmula 1. Presenta una
+      interfaz clara y funcional con los datos más relevantes, obtenidos desde
+      una API externa (no oficial).
+    </p>
+    <br />
+
+    <p>Incluye:</p>
+    <ul>
+      <li>Contador regresivo en tiempo real para la próxima carrera.</li>
+      <li>Clasificación actual de pilotos y equipos.</li>
+      <li>
+        Diseño moderno con <strong>Tailwind CSS</strong> y
+        <strong>DaisyUI</strong>.
+      </li>
+    </ul>
+    <br />
+    <p>Tecnologías utilizadas:</p>
+    <div class="flex gap-4">
+      <img
+        src="https://cdn.simpleicons.org/angular/000000"
+        title="Angular"
+        alt="Angular"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/tailwindcss/000000"
+        title="Tailwind CSS / DaisyUI"
+        alt="Tailwind CSS / DaisyUI"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/css/000000"
+        title="CSS"
+        alt="CSS"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/typescript/000000"
+        title="TypeScript"
+        alt="TypeScript"
+        width="30"
+        height="30"
+      />
+    </div>
+  </div>
+
+  <!-- Imagen app -->
+  <div class="flex-1 flex flex-col items-center gap-4">
+    <img
+      src="images/proyectos/informula-logo.svg"
+      alt="informula-logo"
+      class="w-auto m-auto max-h-[75px] h-auto object-contain"
+    />
+    <img
+      src="images/proyectos/fj-captura.png"
+      alt="Captura app informula"
+      class="w-full max-w-md rounded-2xl border-[8px] border-black"
+    />
+  </div>
+  }
+
+  <!-- Gesclub -->
+  @if (seleccionado == 'gesclub') {
+  <!-- Texto -->
+  <div class="flex-1 h-full">
+    <h3 class="text-center text-4xl">Gesclub</h3>
+    <br />
+
+    <p>
+      Aplicación web desarrollada con <strong>Angular 19</strong> que facilita
+      la gestión de socios en un club deportivo. Presenta una interfaz intuitiva
+      y eficiente que permite añadir, eliminar y modificar.
+    </p>
+    <br />
+
+    <p>Incluye:</p>
+    <ul>
+      <li>Gestión completa de socios con perfiles personalizados.</li>
+      <li>
+        Calendario de eventos y actividades con notificaciones automáticas.
+      </li>
+      <li>
+        Diseño moderno con <strong>Tailwind CSS</strong> y
+        <strong>DaisyUI</strong>.
+      </li>
+    </ul>
+    <br />
+    <p>Tecnologías utilizadas:</p>
+    <div class="flex gap-4">
+      <img
+        src="https://cdn.simpleicons.org/angular/000000"
+        title="Angular 19"
+        alt="Angular 19"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/mongodb/000000"
+        title="MongoDB"
+        alt="MongoDB"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/tailwindcss/000000"
+        title="Tailwind CSS / DaisyUI"
+        alt="Tailwind CSS / DaisyUI"
+        width="30"
+        height="30"
+      />
+      <img
+        src="https://cdn.simpleicons.org/typescript/000000"
+        title="TypeScript"
+        alt="TypeScript"
+        width="30"
+        height="30"
+      />
+    </div>
+  </div>
+
+  <!-- Imagen app -->
+  <div class="flex-1 flex flex-col items-center gap-4">
+    <img
+      src="images/proyectos/gesclub-logo.svg"
+      alt="gesclub-logo"
+      class="w-auto m-auto max-h-[75px] h-auto object-contain"
+    />
+    <img
+      src="images/proyectos/fj-captura.png"
+      alt="Captura app gesclub"
+      class="w-full max-w-md rounded-2xl border-[8px] border-black"
+    />
+  </div>
+  }
+</div>
+}
