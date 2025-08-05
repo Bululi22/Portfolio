@@ -1,59 +1,15 @@
-<div class="bg-pink-300 w-full h-screen m-auto">
-  <!--  -->
-  <div class="flex justify-evenly p-4 gap-4">
-    <div
-      class="card card-fj w-100 h-60 rounded-3xl bg-purple-500 p-5 flex flex-col"
-      (click)="seleccionado('fj')"
-    >
-      <img
-        src="images/proyectos/fj-logo.svg"
-        alt="fj-logo"
-        class="object-cover w-auto max-h-35 m-auto"
-      />
-      <h3 class="text-center text-4xl bottom-0">FJ</h3>
-    </div>
-
-    <!-- Informula -->
-    <div
-      class="card card-fj w-100 h-60 rounded-3xl bg-purple-500 p-5 flex flex-col"
-      (click)="seleccionado('informula')"
-    >
-      <img
-        src="images/proyectos/informula-logo.svg"
-        alt="informula-logo"
-        class="object-cover w-auto max-h-35 m-auto"
-      />
-
-      <h3 class="text-center text-4xl bottom-0">Informula</h3>
-    </div>
-
-    <!-- Gesclub -->
-    <div
-      class="card card-fj w-100 h-60 rounded-3xl bg-purple-500 p-5 flex flex-col"
-      (click)="seleccionado('gesclub')"
-    >
-      <img
-        src="images/proyectos/gesclub-logo.svg"
-        alt="gesclub-logo"
-        class="object-cover w-auto max-h-35 m-auto"
-      />
-      <h3 class="text-center text-4xl bottom-0">Gesclub</h3>
-    </div>
-  </div>
-
-  <!-- Info -->
-  <app-proyectos-info [seleccionado]="nombreSeleccionado" [cerrar]="cerrar" />
-</div>
-<svg viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
-  <path fill="#0af" d="M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z">
-    <animate
-      attributeName="d"
-      dur="5s"
-      repeatCount="indefinite"
-      values="
-        M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z;
-        M0,120 C300,0 900,200 1200,120 L1200,200 L0,200 Z;
-        M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z"
+<div class="w-full h-auto -z-0 relative py-1 fondo">
+  <!-- --- -->
+  <h2 class="text-[16vw] md:text-8xl font-bold text-claro">Proyectos</h2>
+  <!-- --- -->
+  @for (proyecto of proyectos; track proyecto) {
+  <div
+    class="w-[90vw] max-w-[1500px] p-5 gap-8 m-auto my-10 rounded-3xl text-azulClaro shadow-[0_7px_20px_5px_#00000088] bg-[#1e1e1e75]"
+  >
+    <app-proyectos-info
+      [proyecto]="proyecto"
+      class="flex flex-col-reverse gap-3 md:flex-row items-center justify-between backdrop-blur-[6px]"
     />
-  </path>
-</svg>
+  </div>
+  }
+</div>

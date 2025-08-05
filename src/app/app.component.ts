@@ -9,8 +9,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
   imports: [
     HeaderComponent,
     ExperienciaComponent,
-    PruebasComponent,
     ProyectosComponent,
+    PruebasComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

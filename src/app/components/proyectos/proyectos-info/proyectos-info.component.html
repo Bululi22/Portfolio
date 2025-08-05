@@ -1,20 +1,9 @@
-@if (seleccionado) {
-<div
-  class="w-[95vw] max-w-[2000px] p-5 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg m-auto rounded-3xl bg-purple-400 relative"
->
-  <!-- Botón cerrar -->
-  <button
-    class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-black transition"
-    (click)="cerrar()"
-  >
-    &times;
-  </button>
-
-  <!-- FJ -->
-  @if (seleccionado == 'fj') {
-  <!-- Texto -->
-  <div class="flex-1 h-full">
-    <h3 class="text-center text-4xl">FJ</h3>
+<!-- FJ -->
+@if (proyecto == 'fj') {
+<!-- Texto -->
+<div class="flex-[1.5] h-full mx-2 min-h-[400px] flex flex-col justify-between">
+  <div>
+    <h3 class="text-center text-4xl text-claro font-bold">FJ</h3>
     <br />
 
     <p>
@@ -45,46 +34,75 @@
 
     <p>Diseñada para aprender mecanografía de forma intuitiva y efectiva.</p>
     <br />
-
-    <p>Tecnologías utilizadas:</p>
-    <div class="flex gap-4">
-      <img
-        src="https://cdn.simpleicons.org/angular/000000"
-        title="Angular 17"
-        alt="Angular 17"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/css/000000"
-        title="CSS"
-        alt="CSS"
-        width="30"
-        height="30"
-      />
+  </div>
+  <div class="flex justify-between items-end">
+    <div>
+      <p>Tecnologías utilizadas:</p>
+      <div class="flex gap-4 iconos">
+        <img
+          src="https://cdn.simpleicons.org/angular/DD0031"
+          title="Angular 17"
+          alt="Angular 17"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/css/1572B6"
+          title="CSS"
+          alt="CSS"
+          width="30"
+          height="30"
+        />
+      </div>
+    </div>
+    <div>
+      <a
+        href="https://github.com/Bululi22/FJ"
+        target="_blank"
+        class="bg-[#ffffff17] text-claro p-2 rounded-full shadow hover:scale-110 transition duration-300 inline-flex items-center justify-center"
+        title="GitHub"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+        >
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12a12.01 12.01 0 008.21 11.41c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.79-1.35-1.79-1.1-.75.08-.74.08-.74 1.21.09 1.84 1.24 1.84 1.24 1.08 1.84 2.84 1.31 3.53 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.34-5.47-5.96 0-1.31.47-2.38 1.24-3.23-.12-.3-.54-1.52.12-3.16 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.85 1.24 1.92 1.24 3.23 0 4.63-2.81 5.66-5.49 5.96.43.38.81 1.12.81 2.25v3.34c0 .32.21.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- Imagen app -->
-  <div class="flex-1 flex flex-col items-center gap-4">
-    <img
-      src="images/proyectos/fj-logo.svg"
-      alt="fj-logo"
-      class="w-auto m-auto max-h-[75px] h-auto object-contain"
-    />
+<!-- Imagen app -->
+<div class="flex-1 flex flex-col items-center gap-4">
+  <img
+    src="images/proyectos/fj-logo.svg"
+    alt="fj-logo"
+    class="w-auto m-auto max-h-[75px] h-auto object-contain"
+  />
+  <div
+    class="relative rounded-2xl border-[8px] border-black w-full max-w-md overflow-hidden group"
+  >
     <img
       src="images/proyectos/fj-captura.png"
       alt="Captura app fj"
-      class="w-full max-w-md rounded-2xl border-[8px] border-black"
+      class="w-full"
     />
   </div>
+</div>
 
-  }
-  <!-- Informula -->
-  @if (seleccionado == 'informula') {
-  <!-- Texto -->
-  <div class="flex-1 h-full">
-    <h3 class="text-center text-4xl">Informula</h3>
+}
+<!-- Informula -->
+@if (proyecto == 'informula') {
+<!-- Texto -->
+<div class="flex-[1.5] h-full mx-2 min-h-[400px] flex flex-col justify-between">
+  <div>
+    <h3 class="text-center text-4xl text-claro font-bold">Informula</h3>
     <br />
 
     <p>
@@ -104,60 +122,90 @@
         <strong>DaisyUI</strong>.
       </li>
     </ul>
-    <br />
-    <p>Tecnologías utilizadas:</p>
-    <div class="flex gap-4">
-      <img
-        src="https://cdn.simpleicons.org/angular/000000"
-        title="Angular"
-        alt="Angular"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/tailwindcss/000000"
-        title="Tailwind CSS / DaisyUI"
-        alt="Tailwind CSS / DaisyUI"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/css/000000"
-        title="CSS"
-        alt="CSS"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/typescript/000000"
-        title="TypeScript"
-        alt="TypeScript"
-        width="30"
-        height="30"
-      />
+  </div>
+  <div class="flex justify-between items-end">
+    <div>
+      <p>Tecnologías utilizadas:</p>
+      <div class="flex gap-4 iconos mt-2">
+        <img
+          src="https://cdn.simpleicons.org/angular/DD0031"
+          title="Angular 19"
+          alt="Angular 19"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
+          title="Tailwind CSS / DaisyUI"
+          alt="Tailwind CSS / DaisyUI"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/css/1572B6"
+          title="CSS"
+          alt="CSS"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/typescript/3178C6"
+          title="TypeScript"
+          alt="TypeScript"
+          width="30"
+          height="30"
+        />
+      </div>
+    </div>
+    <div>
+      <a
+        href="https://github.com/Bululi22/InFormula"
+        target="_blank"
+        class="bg-[#ffffff17] text-claro p-2 rounded-full shadow hover:scale-110 transition duration-300 inline-flex items-center justify-center"
+        title="GitHub"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+        >
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12a12.01 12.01 0 008.21 11.41c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.79-1.35-1.79-1.1-.75.08-.74.08-.74 1.21.09 1.84 1.24 1.84 1.24 1.08 1.84 2.84 1.31 3.53 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.34-5.47-5.96 0-1.31.47-2.38 1.24-3.23-.12-.3-.54-1.52.12-3.16 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.85 1.24 1.92 1.24 3.23 0 4.63-2.81 5.66-5.49 5.96.43.38.81 1.12.81 2.25v3.34c0 .32.21.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- Imagen app -->
-  <div class="flex-1 flex flex-col items-center gap-4">
+<!-- Imagen app -->
+<div class="flex-1 flex flex-col items-center gap-4">
+  <img
+    src="images/proyectos/informula-logo.svg"
+    alt="informula-logo"
+    class="w-auto m-auto max-h-[75px] h-auto object-contain"
+  />
+  <div
+    class="relative rounded-2xl border-[8px] border-black w-full max-w-md overflow-hidden group"
+  >
     <img
-      src="images/proyectos/informula-logo.svg"
-      alt="informula-logo"
-      class="w-auto m-auto max-h-[75px] h-auto object-contain"
-    />
-    <img
-      src="images/proyectos/fj-captura.png"
+      src="images/proyectos/informula-captura.png"
       alt="Captura app informula"
-      class="w-full max-w-md rounded-2xl border-[8px] border-black"
+      class="w-full"
     />
   </div>
-  }
+</div>
 
-  <!-- Gesclub -->
-  @if (seleccionado == 'gesclub') {
-  <!-- Texto -->
-  <div class="flex-1 h-full">
-    <h3 class="text-center text-4xl">Gesclub</h3>
+}
+
+<!-- Gesclub -->
+@if (proyecto == 'gesclub') {
+<!-- Texto -->
+<div class="flex-[1.5] h-full mx-2 min-h-[400px] flex flex-col justify-between">
+  <div>
+    <h3 class="text-center text-4xl text-claro font-bold">Gesclub</h3>
     <br />
 
     <p>
@@ -178,53 +226,80 @@
         <strong>DaisyUI</strong>.
       </li>
     </ul>
-    <br />
-    <p>Tecnologías utilizadas:</p>
-    <div class="flex gap-4">
-      <img
-        src="https://cdn.simpleicons.org/angular/000000"
-        title="Angular 19"
-        alt="Angular 19"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/mongodb/000000"
-        title="MongoDB"
-        alt="MongoDB"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/tailwindcss/000000"
-        title="Tailwind CSS / DaisyUI"
-        alt="Tailwind CSS / DaisyUI"
-        width="30"
-        height="30"
-      />
-      <img
-        src="https://cdn.simpleicons.org/typescript/000000"
-        title="TypeScript"
-        alt="TypeScript"
-        width="30"
-        height="30"
-      />
+  </div>
+  <div class="flex justify-between items-end">
+    <div>
+      <p>Tecnologías utilizadas:</p>
+      <div class="flex gap-4 iconos">
+        <img
+          src="https://cdn.simpleicons.org/angular/DD0031"
+          title="Angular 19"
+          alt="Angular 19"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/mongodb/47A248"
+          title="MongoDB"
+          alt="MongoDB"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
+          title="Tailwind CSS / DaisyUI"
+          alt="Tailwind CSS / DaisyUI"
+          width="30"
+          height="30"
+        />
+        <img
+          src="https://cdn.simpleicons.org/typescript/3178C6"
+          title="TypeScript"
+          alt="TypeScript"
+          width="30"
+          height="30"
+        />
+      </div>
+    </div>
+    <div>
+      <a
+        href="https://github.com/Bululi22/FJ"
+        target="_blank"
+        class="bg-[#ffffff17] text-claro p-2 rounded-full shadow hover:scale-110 transition duration-300 inline-flex items-center justify-center"
+        title="GitHub"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          width="40"
+          height="40"
+        >
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12a12.01 12.01 0 008.21 11.41c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.35-1.79-1.35-1.79-1.1-.75.08-.74.08-.74 1.21.09 1.84 1.24 1.84 1.24 1.08 1.84 2.84 1.31 3.53 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.34-5.47-5.96 0-1.31.47-2.38 1.24-3.23-.12-.3-.54-1.52.12-3.16 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.85 1.24 1.92 1.24 3.23 0 4.63-2.81 5.66-5.49 5.96.43.38.81 1.12.81 2.25v3.34c0 .32.21.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- Imagen app -->
-  <div class="flex-1 flex flex-col items-center gap-4">
+<!-- Imagen app -->
+<div class="flex-1 flex flex-col items-center gap-4">
+  <img
+    src="images/proyectos/gesclub-logo.svg"
+    alt="gesclub-logo"
+    class="w-auto m-auto max-h-[75px] h-auto object-contain"
+  />
+  <div
+    class="relative rounded-2xl border-[8px] border-black w-full max-w-md overflow-hidden group"
+  >
+    <!-- Imagen con efecto blur al hacer hover -->
     <img
-      src="images/proyectos/gesclub-logo.svg"
-      alt="gesclub-logo"
-      class="w-auto m-auto max-h-[75px] h-auto object-contain"
-    />
-    <img
-      src="images/proyectos/fj-captura.png"
+      src="images/proyectos/gesclub-captura.png"
       alt="Captura app gesclub"
-      class="w-full max-w-md rounded-2xl border-[8px] border-black"
+      class="w-full"
     />
   </div>
-  }
 </div>
 }

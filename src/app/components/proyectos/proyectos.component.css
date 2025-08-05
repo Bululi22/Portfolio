@@ -1,0 +1,10 @@
+.fondo {
+  background-image: url("/images/fondoAzul.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+h2 {
+  text-align: center;
+  text-shadow: 0 17px 20px rgb(28 50 81);
+}
