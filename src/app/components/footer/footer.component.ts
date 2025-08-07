@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-pruebas',
+  selector: 'app-footer',
   imports: [],
-  templateUrl: './pruebas.component.html',
-  styleUrls: ['pruebas.component.css'],
+  templateUrl: './footer.component.html',
+  styleUrls: ['footer.component.css'],
 })
-export class PruebasComponent {
+export class FooterComponent {
   copiado = false;
 
   copiarEmail() {

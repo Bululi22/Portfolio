@@ -1,10 +1,18 @@
 .fondo {
-  background-image: url("/images/fondoAzul.svg");
+  /* background-image: url("/images/fondoAzul.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
+  background-color: #81e1ff;
 }
 h2 {
   text-align: center;
   text-shadow: 0 17px 20px rgb(28 50 81);
+}
+.sombra-exp {
+  text-shadow: -6px 6px 0 #1d1d1b, -1px -1px 0 #1d1d1b, 1px -1px 0 #1d1d1b,
+    -1px 1px 0 #1d1d1b, 1px 1px 0 #1d1d1b;
+}
+.sombra-box-exp {
+  box-shadow: -4px 4px #1d1d1b;
 }

@@ -1,14 +1,18 @@
 <div class="w-full h-auto -z-0 relative py-1 fondo">
   <!-- --- -->
-  <h2 class="text-[16vw] md:text-8xl font-bold text-claro">Proyectos</h2>
+  <div class="relative z-10 text-center">
+    <h2 class="text-[16vw] md:text-8xl font-bold sombra-exp text-claro">
+      Proyectos
+    </h2>
+  </div>
   <!-- --- -->
   @for (proyecto of proyectos; track proyecto) {
   <div
-    class="w-[90vw] max-w-[1500px] p-5 gap-8 m-auto my-10 rounded-3xl text-azulClaro shadow-[0_7px_20px_5px_#00000088] bg-[#1e1e1e75]"
+    class="w-[90vw] max-w-[1500px] gap-8 m-auto my-10 text-oscuro sombra-box-exp bg-claro border-3 border-oscuro"
   >
     <app-proyectos-info
       [proyecto]="proyecto"
-      class="flex flex-col-reverse gap-3 md:flex-row items-center justify-between backdrop-blur-[6px]"
+      class="flex flex-col-reverse gap-3 md:flex-row justify-between"
     />
   </div>
   }

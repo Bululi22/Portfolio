@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { PruebonComponent } from './components/pruebon/pruebon.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     HeaderComponent,
     ExperienciaComponent,
     ProyectosComponent,
-    PruebasComponent,
+    FooterComponent,
+    PruebonComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
