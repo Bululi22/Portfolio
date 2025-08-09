@@ -19,3 +19,11 @@
 .animate-fade-down {
   animation: fadeDown 1.6s ease-out forwards;
 }
+header {
+  background: url("/images/fondoEspacio.svg") no-repeat center center,
+    linear-gradient(to bottom, black 0%, #0f1b1e 15%, #2f555b 75%, #4c8695 100%);
+  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

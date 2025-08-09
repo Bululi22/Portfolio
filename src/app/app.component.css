@@ -1,0 +1,7 @@
+.fondo {
+  background: url("/images/fondoSuelo.svg") no-repeat bottom center,
+    linear-gradient(to bottom, #4c8695 0%, #81e1ff 20%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}

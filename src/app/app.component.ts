@@ -4,6 +4,7 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { PruebonComponent } from './components/pruebon/pruebon.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderNubesComponent } from './components/header/header-nubes/header-nubes.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ExperienciaComponent,
     ProyectosComponent,
     FooterComponent,
-    PruebonComponent,
+    HeaderNubesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { HeaderNubesComponent } from './header-nubes/header-nubes.component';
 
 @Component({
   selector: 'app-header',
-  imports: [HeaderNubesComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
