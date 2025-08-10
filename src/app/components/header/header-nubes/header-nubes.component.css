@@ -1,32 +1,35 @@
-@keyframes nube {
+@keyframes moverNubes {
   0% {
-    left: -50%;
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  88% {
-    opacity: 1;
+    transform: translateX(-100%);
   }
   100% {
-    left: 105%;
-    opacity: 0;
+    transform: translateX(100%);
   }
 }
 
-.animate-nube {
-  animation: nube 15s linear infinite;
+.animate-nubes {
+  animation: moverNubes 100s linear infinite;
+  height: 130vh;
+  max-width: fit-content;
+}
+div {
+  height: 130vh;
 }
 
-@media (max-width: 768px) {
-  .animate-nube {
-    animation-duration: 10s;
+@media (max-width: 1440px) {
+  .animate-nubes {
+    height: 170vh;
+  }
+  div {
+    height: 170vh;
   }
 }
-
-@media (max-width: 425px) {
-  .animate-nube {
-    animation-duration: 5s;
+@media (max-width: 767px) {
+  .animate-nubes {
+    animation: moverNubes 200s linear infinite;
+    height: 280vh;
+  }
+  div {
+    height: 280vh;
   }
 }
