@@ -1,12 +1,14 @@
 .fondo {
-  background: url("../../public/images/fondoSuelo.svg") no-repeat bottom center,
-    linear-gradient(
-      to bottom,
-      #4c8695 0%,
-      #81e1ff 20%,
-      #a7edfb 50%,
-      #e3fff5 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    #4c8695 0%,
+    #67b4ca 20%,
+    #a7edfb 50%,
+    #e3fff5 100%
+  );
+}
+.suelo {
+  background: url("../../public/images/fondoSuelo.svg") no-repeat bottom center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;

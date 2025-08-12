@@ -28,3 +28,23 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/* --- */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.star {
+  transition: opacity 0.2s ease;
+}
+
+.blink {
+  animation: blink 0.5s linear;
+}
