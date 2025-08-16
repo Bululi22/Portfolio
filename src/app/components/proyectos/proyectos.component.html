@@ -6,16 +6,12 @@
   </div>
   @for (proyecto of proyectos; track proyecto; let i = $index ) {
   <div
-    class="w-[90vw] max-w-[1500px] gap-8 m-auto my-10 text-oscuro sombra-box-exp bg-claro border-3 border-oscuro"
+    class="w-[90vw] max-w-[1500px] gap-8 m-auto my-10 text-oscuro sombra-box-exp bg-claro border-3 border-oscuro rounded-3xl overflow-hidden"
   >
     <app-proyectos-info
       [proyecto]="proyecto"
-      class="flex flex-col-reverse gap-3 md:flex-row justify-between"
-      [ngClass]="
-        esPar(i)
-          ? 'flex flex-col-reverse gap-3 md:flex-row-reverse justify-between'
-          : 'flex flex-col-reverse gap-3 md:flex-row justify-between'
-      "
+      class="flex flex-col-reverse justify-between"
+      [ngClass]="esPar(i) ? 'md:flex-row-reverse' : 'md:flex-row'"
     />
   </div>
   }

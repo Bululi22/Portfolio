@@ -9,27 +9,27 @@
 
 .animate-nubes {
   animation: moverNubes 150s linear infinite;
-  height: 130svh;
+  height: 100%;
   max-width: fit-content;
 }
 div {
-  height: 130svh;
+  height: 100%;
 }
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .animate-nubes {
-    height: 170svh;
+    height: 210svh;
   }
   div {
-    height: 170svh;
+    height: 210svh;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .animate-nubes {
     animation-duration: 200s;
-    height: 280svh;
+    height: 315svh;
   }
   div {
-    height: 280svh;
+    height: 315svh;
   }
-}
+} */
