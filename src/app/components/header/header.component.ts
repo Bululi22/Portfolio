@@ -10,11 +10,15 @@ export class HeaderComponent implements AfterViewInit {
   copiado = false;
 
   copiarEmail() {
-    navigator.clipboard.writeText('adrian.ferrad@gmail.com').then(() => {
-      this.copiado = true;
-      setTimeout(() => (this.copiado = false), 2000); // Oculta después de 2 seg
-    });
+    navigator.clipboard.writeText('adrian.ferrad@gmail.com');
+    this.copiado = true;
+
+    // Se quita el mensaje tras 1.5 segundos
+    setTimeout(() => {
+      this.copiado = false;
+    }, 1500);
   }
+
   ngAfterViewInit() {
     const stars = document.querySelectorAll<SVGUseElement>('.star');
 
@@ -32,12 +36,12 @@ export class HeaderComponent implements AfterViewInit {
           availableStars[Math.floor(Math.random() * availableStars.length)];
 
         star.classList.add('blink');
-        cooldowns.set(star, now + 1000); // 1s de descanso antes de volver a parpadear
+        cooldowns.set(star, now + 1100); // 1s de descanso antes de volver a parpadear
 
         setTimeout(() => {
           star.classList.remove('blink');
-        }, 500); // duración del parpadeo
+        }, 1000); // duración del parpadeo
       }
-    }, 100); // cada 0.8s intentamos hacer parpadear alguna estrella
+    }, 100); // cada 0.1s intentamos hacer parpadear alguna estrella
   }
 }

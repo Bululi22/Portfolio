@@ -10,9 +10,12 @@ export class FooterComponent {
   copiado = false;
 
   copiarEmail() {
-    navigator.clipboard.writeText('adrian.ferrad@gmail.com').then(() => {
-      this.copiado = true;
-      setTimeout(() => (this.copiado = false), 2000); // Oculta después de 2 seg
-    });
+    navigator.clipboard.writeText('adrian.ferrad@gmail.com');
+    this.copiado = true;
+
+    // Se quita el mensaje tras 1.5 segundos
+    setTimeout(() => {
+      this.copiado = false;
+    }, 1500);
   }
 }

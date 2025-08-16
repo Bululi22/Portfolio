@@ -7,9 +7,3 @@
     #e3fff5 100%
   );
 }
-.suelo {
-  background: url("../../public/images/fondoSuelo.svg") no-repeat bottom center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
